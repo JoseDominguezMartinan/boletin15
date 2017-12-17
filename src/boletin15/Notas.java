@@ -5,6 +5,7 @@
  */
 package boletin15;
 
+import static java.lang.String.format;
 import java.util.Scanner;
 
 /**
@@ -62,10 +63,10 @@ public class Notas {
     }
 
     public void notaAvaliacion() { // facemos a saida sumando a nota dos boletins (20%) o corresspondete as medias teorica e practica
-        System.out.println("PROBAS TEORICAS " + mediaTeoricos);
-        System.out.println("PROBAS PRACTICAS " + notaPractica);
-        System.out.println("BOLETINS " + notaBoletin);
-        System.out.println("NOTA TOTAL " + ((mediaTeoricos * 0.40) + (notaPractica * 0.40) + (notaBoletin)));
+        System.out.println (String.format("PROBAS TEORICAS: %.2f",mediaTeoricos)); // string format imprime en consola formateando todo en string e concatenando todo co formato que din %.2f non dara mais de dous decimais
+        System.out.println(String.format("PROBAS PRACTICAS: %.2f" , notaPractica));
+        System.out.println(String.format("BOLETINS: %.2f" , notaBoletin));
+        System.out.println(String.format("NOTA TOTAL: %.2f" , ((mediaTeoricos * 0.40) + (notaPractica * 0.40) + (notaBoletin))));
     }
 
 }
